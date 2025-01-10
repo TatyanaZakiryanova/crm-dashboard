@@ -1,0 +1,42 @@
+@use '../../styles/variables' as var;
+
+.mainBlock {
+  padding: 20px;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    .topTitle {
+      font-weight: var.$bold;
+    }
+    .topElements {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      .searchInput,
+      .dropdown {
+        width: 200px;
+      }
+    }
+  }
+
+  @media (max-width: 430px) {
+    .top {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      .topElements {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        .searchInput,
+        .dropdown {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -42,3 +42,8 @@ export const SECTION_ITEMS = [
   { title: 'Members', icon: <UserCheck size={40} />, value: '1,893' },
   { title: 'Active Now', icon: <Monitor size={40} />, value: '189' },
 ];
+
+export const DROPDOWN_OPTIONS = [
+  { name: 'Newest', value: 'newest' },
+  { name: 'Oldest', value: 'oldest' },
+];
