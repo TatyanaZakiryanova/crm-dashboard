@@ -4,7 +4,10 @@ import {
   HandCoins,
   KeyRound,
   MessageCircleQuestion,
+  Monitor,
   SquareUser,
+  UserCheck,
+  Users,
 } from 'lucide-react';
 
 export const SIDEBAR_CATEGORIES = [
@@ -32,4 +35,10 @@ export const SIDEBAR_CATEGORIES = [
     title: 'Help',
     icon: <MessageCircleQuestion size={20} />,
   },
+];
+
+export const SECTION_ITEMS = [
+  { title: 'Customers', icon: <Users size={40} />, value: '5,423' },
+  { title: 'Members', icon: <UserCheck size={40} />, value: '1,893' },
+  { title: 'Active Now', icon: <Monitor size={40} />, value: '189' },
 ];
