@@ -47,3 +47,5 @@ export const DROPDOWN_OPTIONS = [
   { name: 'Newest', value: 'newest' },
   { name: 'Oldest', value: 'oldest' },
 ];
+
+export const TABLE_HEADERS = ['#', 'Name', 'Username', 'Email', 'Company', 'Phone'];

@@ -1,0 +1,66 @@
+@use '../../../styles/variables' as var;
+@use '../../../styles/mixins' as mix;
+
+$table-border-color: #d8d8d8;
+$table-header-bg: #f2f1f6;
+$table-header-text: #ababab;
+$table-hover-bg: #f1f1f4;
+$table-padding: 12px;
+$table-border-radius: 8px;
+
+.container {
+  max-width: 100%;
+  border-radius: $table-border-radius;
+  overflow-x: auto;
+  @include mix.box-shadow;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  @media screen and (max-width: 768px) {
+    width: auto;
+    max-width: 100%;
+  }
+
+  th,
+  td {
+    padding: $table-padding;
+    text-align: left;
+  }
+
+  th {
+    background-color: $table-header-bg;
+    color: $table-header-text;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  tr {
+    transition: background-color 0.3s ease;
+    color: var.$text-color-main;
+
+    &:nth-child(even) {
+      background-color: #f5f4f7;
+    }
+
+    &:hover {
+      background-color: $table-hover-bg;
+    }
+  }
+
+  td {
+    border-top: 1px solid $table-border-color;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid $table-border-color;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+}
