@@ -1,0 +1,21 @@
+@use '../../styles/variables' as var;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  .user {
+    display: flex;
+    gap: 10px;
+    .userInform {
+      display: flex;
+      flex-direction: column;
+      .username {
+        font-weight: var.$bold;
+      }
+      .userDescription {
+        font-size: 12px;
+      }
+    }
+  }
+}

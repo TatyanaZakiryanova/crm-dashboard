@@ -9,6 +9,23 @@
     background-color: var.$background-color-block;
     min-height: 100vh;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
     @include mix.card-style;
+    .title {
+      font-size: 30px;
+      font-weight: var.$bold;
+      color: var.$text-color-main;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
   }
 }

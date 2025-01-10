@@ -1,0 +1,25 @@
+@use '../../styles/variables' as var;
+@use '../../styles/mixins' as mix;
+
+.sidebarCategories {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var.$text-color-secondary;
+    padding: 10px 20px;
+    border-radius: var.$border-radius;
+    cursor: pointer;
+    @include mix.transition;
+    &:hover {
+      background-color: var.$button-hover;
+    }
+    &.active {
+      background-color: var.$button-hover;
+      color: white;
+    }
+  }
+}
