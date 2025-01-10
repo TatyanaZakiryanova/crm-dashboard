@@ -11,6 +11,7 @@
 
 body {
   font-family: 'Poppins', serif;
+  background-color: var.$background-color;
 }
 
 a {
@@ -33,10 +34,10 @@ ol {
   display: flex;
   min-height: 100vh;
   .mainBlock {
+    background-color: var.$background-color;
     width: 70%;
-    background-color: aquamarine;
     padding: 20px;
-    margin-left: 30%;
     overflow-y: auto;
+    margin-left: 30%;
   }
 }

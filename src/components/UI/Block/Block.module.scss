@@ -1,0 +1,7 @@
+@use '../../../styles/variables' as var;
+@use '../../../styles/mixins' as mix;
+
+.block {
+  @include mix.card-style;
+  background-color: var.$background-color-block;
+}
