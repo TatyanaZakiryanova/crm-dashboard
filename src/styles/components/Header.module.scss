@@ -12,4 +12,16 @@
   .headerInput {
     width: 200px;
   }
+
+  @media (max-width: 430px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    .title {
+      font-size: 18px;
+    }
+    .headerInput {
+      width: 100%;
+    }
+  }
 }
