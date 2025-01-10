@@ -1,0 +1,18 @@
+@use '/src/styles/variables' as var;
+
+//shadow
+@mixin box-shadow {
+  box-shadow: 0 4px 6px var.$box-shadow-color;
+}
+
+//transition
+@mixin transition($property: all) {
+  transition: $property var.$transition-speed ease-in-out;
+}
+
+//content-block
+@mixin card-style {
+  background-color: white;
+  @include box-shadow;
+  border-radius: var.$border-radius;
+}

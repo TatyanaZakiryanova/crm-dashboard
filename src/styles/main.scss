@@ -1,0 +1,42 @@
+@use './variables' as var;
+@use './mixins' as mix;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  .mainBlock {
+    width: 70%;
+    background-color: aquamarine;
+    padding: 20px;
+    margin-left: 30%;
+    overflow-y: auto;
+  }
+}
