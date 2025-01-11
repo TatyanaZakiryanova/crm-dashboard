@@ -1,4 +1,4 @@
-import { LayoutDashboard, LogOut, User } from 'lucide-react';
+import { Bolt, LogOut, User } from 'lucide-react';
 import { useState } from 'react';
 
 import { Button } from '../UI/Button';
@@ -17,13 +17,20 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ categories }) => {
   const [activeCategoryId, setActiveCategoryId] = useState<number>(2);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen((prev) => !prev);
+  };
 
   return (
-    <div className={styles.sidebarContainer}>
+    <div className={`${styles.sidebarContainer} ${isSidebarOpen ? styles.open : ''}`}>
       <div className={styles.sidebar}>
         <div className={styles.title}>
-          <LayoutDashboard strokeWidth={1.5} size={35} />
-          <div>Dashboard</div>
+          <div className={styles.appIcon} onClick={toggleSidebar}>
+            <Bolt size={40} strokeWidth={1.5} />
+          </div>
+          <div className={styles.appTitle}>Dashboard</div>
         </div>
         <div className={styles.content}>
           <div className={categoriesStyles.sidebarCategories}>
@@ -33,12 +40,14 @@ const Sidebar: React.FC<SidebarProps> = ({ categories }) => {
                 onClick={() => setActiveCategoryId(index)}
                 className={`${categoriesStyles.item}  ${index === activeCategoryId ? categoriesStyles.active : ''}`}
               >
-                {category.icon}
-                {category.title}
+                <div className={categoriesStyles.icon}>{category.icon}</div>
+                <div className={!isSidebarOpen ? categoriesStyles.showTitle : ''}>
+                  {category.title}
+                </div>
               </div>
             ))}
           </div>
-          <div className={footerStyles.footer}>
+          <div className={`${footerStyles.footer}  ${isSidebarOpen ? footerStyles.open : ''}`}>
             <div className={footerStyles.user}>
               <User size={40} />
               <div className={footerStyles.userInform}>

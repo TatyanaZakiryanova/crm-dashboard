@@ -14,12 +14,22 @@
     border-radius: var.$border-radius;
     cursor: pointer;
     @include mix.transition;
+    .showTitle {
+      display: none;
+    }
     &:hover {
       background-color: var.$button-hover;
     }
     &.active {
       background-color: var.$button-hover;
       color: white;
+    }
+  }
+  @media (min-width: 768px) {
+    .item {
+      .showTitle {
+        display: block;
+      }
     }
   }
 }

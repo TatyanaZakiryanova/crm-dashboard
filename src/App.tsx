@@ -27,8 +27,10 @@ const App = () => {
   const [originalUsers, setOriginalUsers] = useState<TableRow[]>([]);
   const [sortColumn, setSortColumn] = useState<string | null>(null);
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const fetchUsers = async () => {
+    setIsLoading(true);
     try {
       const res = await fetch('/data.json');
       const data: User[] = await res.json();
@@ -37,6 +39,8 @@ const App = () => {
       setUsers(formattedData);
     } catch (error) {
       console.error(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -114,13 +118,17 @@ const App = () => {
               />
             </div>
           </div>
-          <Table
-            headers={TABLE_HEADERS}
-            rows={users}
-            onSort={handleSort}
-            sortColumn={sortColumn}
-            sortDirection={sortDirection}
-          />
+          {isLoading ? (
+            <div className={mainStyles.status}>Loading...</div>
+          ) : (
+            <Table
+              headers={TABLE_HEADERS}
+              rows={users}
+              onSort={handleSort}
+              sortColumn={sortColumn}
+              sortDirection={sortDirection}
+            />
+          )}
         </Block>
       </div>
     </div>
