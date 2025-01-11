@@ -4,9 +4,9 @@ CRM дашборд с возможностью сортировки таблиц
 
 ## Deployment & Live Demo
 
-[Deploy]
+[Deploy](https://tatyanazakiryanova.github.io/crm-dashboard/)
 
-<img src='/preview.png' alt="preview">
+<img src='./src/assets/preview.png' alt="preview">
 
 ## Technologies Used
 

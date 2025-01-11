@@ -32,7 +32,7 @@ const App = () => {
   const fetchUsers = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch('/data.json');
+      const res = await fetch('/crm-dashboard/data.json');
       const data: User[] = await res.json();
       const formattedData = formatDataForTable(data);
       setOriginalUsers(formattedData);
