@@ -34,13 +34,14 @@ ol {
 .layout {
   display: flex;
   min-height: 100vh;
-  .mainBlock {
-    background-color: var.$background-color;
-    width: 70%;
-    padding: 20px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
+}
+
+.mainBlock {
+  background-color: var.$background-color;
+  width: 70%;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }

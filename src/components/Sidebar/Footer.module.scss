@@ -11,21 +11,25 @@
       margin-top: 15px;
     }
   }
-  .user {
-    display: flex;
-    gap: 10px;
-    .userInform {
-      display: flex;
-      flex-direction: column;
-      .username {
-        font-weight: var.$bold;
-      }
-      .userDescription {
-        font-size: 12px;
-      }
-    }
-  }
+}
+
+.user {
+  display: flex;
+  gap: 10px;
   @media (max-width: 430px) {
     display: none;
   }
+}
+
+.userInform {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-weight: var.$bold;
+}
+
+.userDescription {
+  font-size: 12px;
 }

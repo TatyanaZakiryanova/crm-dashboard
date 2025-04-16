@@ -5,31 +5,33 @@
   position: relative;
   display: flex;
   align-items: center;
-  .icon {
-    position: absolute;
-    left: 10px;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  color: var.$input-elements;
+}
+
+.input {
+  background-color: var.$input-field;
+  border: none;
+  border-radius: var.$border-radius;
+  padding: 10px 10px 10px 30px;
+  &::placeholder {
     color: var.$input-elements;
   }
-  .input {
-    background-color: var.$input-field;
-    border: none;
-    border-radius: var.$border-radius;
-    padding: 10px 10px 10px 30px;
-    &::placeholder {
-      color: var.$input-elements;
-    }
-    &:focus {
-      outline: none;
-    }
-    &.small {
-      height: 20px;
-    }
-    &.medium {
-      height: 30px;
-    }
-    &.large {
-      height: 40px;
-    }
+  &:focus {
+    outline: none;
+  }
+  &.small {
+    height: 20px;
+  }
+  &.medium {
+    height: 30px;
+  }
+  &.large {
+    height: 40px;
   }
   @media (max-width: 768px) {
     width: 100%;
